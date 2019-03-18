@@ -82,8 +82,8 @@ class Module {
 	public function enqueue_scripts() {
 		global $wp_customize;
 		$url = apply_filters(
-			'kirki_package_url_module_tooltips',
-			trailingslashit( Kirki::$url ) . 'vendor/kirki-framework/module-tooltips/src'
+			'kirki_package_url_module_webfont_loader',
+			trailingslashit( Kirki::$url ) . 'vendor/kirki-framework/module-webfont-loader/src'
 		);
 
 		if ( self::$load || $wp_customize || is_customize_preview() ) {
