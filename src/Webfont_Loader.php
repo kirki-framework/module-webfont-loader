@@ -27,16 +27,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Webfont_Loader {
 
 	/**
-	 * The object instance.
-	 *
-	 * @static
-	 * @access private
-	 * @since 3.0.26
-	 * @var object
-	 */
-	private static $instance;
-
-	/**
 	 * Only load the webfont script if this is true.
 	 *
 	 * @static
@@ -49,28 +39,12 @@ class Webfont_Loader {
 	/**
 	 * The class constructor
 	 *
-	 * @access protected
-	 * @since 3.0.26
-	 */
-	protected function __construct() {
-		add_action( 'wp_head', [ $this, 'enqueue_scripts' ], 20 );
-		add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_scripts' ], 20 );
-	}
-
-	/**
-	 * Gets an instance of this object.
-	 * Prevents duplicate instances which avoid artefacts and improves performance.
-	 *
-	 * @static
 	 * @access public
 	 * @since 3.0.26
-	 * @return object
 	 */
-	public static function get_instance() {
-		if ( ! self::$instance ) {
-			self::$instance = new self();
-		}
-		return self::$instance;
+	public function __construct() {
+		add_action( 'wp_head', [ $this, 'enqueue_scripts' ], 20 );
+		add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_scripts' ], 20 );
 	}
 
 	/**
