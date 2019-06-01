@@ -11,7 +11,7 @@
  * @since     3.0.26
  */
 
-namespace Kirki\Modules\Webfont_Loader;
+namespace Kirki\Module;
 
 use Kirki\Core\Kirki;
 use Kirki\URL;
@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Adds script for tooltips.
  */
-class Module {
+class Webfont_Loader {
 
 	/**
 	 * The object instance.

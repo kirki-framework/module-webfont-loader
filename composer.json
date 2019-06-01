@@ -20,7 +20,7 @@
     },
     "autoload"    : {
 		"psr-4" : {
-			"Kirki\\Modules\\Webfont_Loader\\" : "src/"
+			"Kirki\\Module\\" : "src/"
         }
     }
 }
